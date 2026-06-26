@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="dr-fabric-arch" name="Fabric Architecture">
+    <mxGraphModel dx="900" dy="600" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1000" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title" value="Demand-Response — Minimal Microsoft Fabric Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;fontColor=#1A2233;" vertex="1" parent="1">
+          <mxGeometry x="30" y="14" width="620" height="30" as="geometry" />
+        </mxCell>
+
+        <mxCell id="fab" value="Microsoft Fabric  ·  OneLake workspace" style="rounded=1;arcSize=3;html=1;fillColor=#F4F8FE;strokeColor=#2369D2;dashed=1;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontStyle=1;fontColor=#2369D2;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="220" y="60" width="560" height="440" as="geometry" />
+        </mxCell>
+
+        <mxCell id="ingest" value="Ingest new&#10;customer data" style="shape=parallelogram;perimeter=parallelogramPerimeter;html=1;rounded=0;fillColor=#FFFFFF;strokeColor=#2369D2;fontColor=#1A2233;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="30" y="270" width="160" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="nb" value="Notebook&#10;Random Forest (lightweight)&#10;train / score" style="rounded=1;html=1;fillColor=#FFFFFF;strokeColor=#2369D2;fontColor=#1A2233;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="110" width="200" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="lake" value="OneLake Lakehouse&#10;Tables&#10;(customers · features · scores)" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=15;html=1;fillColor=#DAE8FC;strokeColor=#2369D2;fontColor=#1A2233;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="310" y="250" width="190" height="120" as="geometry" />
+        </mxCell>
+
+        <mxCell id="agent" value="Data Agent&#10;natural-language Q&amp;A&#10;over the tables" style="rounded=1;html=1;fillColor=#E8F0FE;strokeColor=#2369D2;fontColor=#1A2233;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="265" width="180" height="90" as="geometry" />
+        </mxCell>
+
+        <mxCell id="user" value="User" style="shape=umlActor;html=1;verticalLabelPosition=bottom;verticalAlign=top;fillColor=#FFFFFF;strokeColor=#2369D2;fontColor=#1A2233;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="860" y="270" width="50" height="80" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e1" value="ingest" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2369D2;fontColor=#1A2233;endArrow=classic;fontSize=11;" edge="1" parent="1" source="ingest" target="lake">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e2" value="read features / write scores" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2369D2;fontColor=#1A2233;startArrow=classic;endArrow=classic;fontSize=11;" edge="1" parent="1" source="nb" target="lake">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e3" value="query tables / results" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2369D2;fontColor=#1A2233;startArrow=classic;endArrow=classic;fontSize=11;" edge="1" parent="1" source="lake" target="agent">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e4" value="ask / answer" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2369D2;fontColor=#1A2233;startArrow=classic;endArrow=classic;fontSize=11;" edge="1" parent="1" source="agent" target="user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

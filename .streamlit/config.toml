@@ -1,0 +1,8 @@
+# OnPoint Insights brand theme (blue sampled from logo). Applied when Streamlit
+# is launched from the project root: streamlit run master/app/dashboard.py
+[theme]
+primaryColor = "#2369D2"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#F4F8FE"
+textColor = "#1A2233"
+font = "sans serif"
