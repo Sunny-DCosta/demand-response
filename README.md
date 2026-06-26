@@ -65,15 +65,8 @@ data ──▶ 01_detect ──▶ 02_segment ──▶ 03_target ──▶ 04_i
 | Conversion plan (of 1,474 occasionals) | **Nudge 446** · Needs-pilot 931 |
 
 <p align="center">
-  <img src="assets/lstm_pred_vs_actual.png" width="48%" alt="LSTM predicted vs actual"/>
-  <img src="assets/responders_volcano.png" width="48%" alt="Responder volcano (effect size vs significance)"/>
+  <img src="assets/readme_sample.png" width="80%" alt="Demand-response analysis"/>
 </p>
-<p align="center">
-  <img src="assets/rf_binary_auc.png" width="48%" alt="Random Forest ROC / AUC"/>
-  <img src="assets/lstm_nonevent_bias.png" width="48%" alt="Non-event bias sanity check"/>
-</p>
-
-More figures in [`assets/`](assets/).
 
 ---
 
