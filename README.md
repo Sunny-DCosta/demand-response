@@ -65,7 +65,7 @@ data ──▶ 01_detect ──▶ 02_segment ──▶ 03_target ──▶ 04_i
 | Conversion plan (of 1,474 occasionals) | **Nudge 446** · Needs-pilot 931 |
 
 <p align="center">
-  <img src="assets/readme_sample.png" width="80%" alt="Demand-response analysis"/>
+  <img src="assets/event_residuals.png" width="85%" alt="Per-user event residuals (actual minus LSTM baseline): event and flagged-peak hours dip below zero, showing measured load reduction"/>
 </p>
 
 ---
